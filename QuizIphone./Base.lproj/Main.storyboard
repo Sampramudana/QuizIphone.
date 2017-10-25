@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dYr-mo-fuK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Task View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AddTaskViewController" customModule="QuizIphone_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZZF-Ig-hpb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Detail" id="cVg-eb-OGq">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mgc-9F-keZ">
+                                            <color key="tintColor" red="0.6125728627" green="0.15943378729999999" blue="0.1174151472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="dYr-mo-fuK" kind="modal" id="IIJ-ex-oq4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZCr-tP-7ab">
+                                            <color key="tintColor" red="0.6125728627" green="0.15943378729999999" blue="0.1174151472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnSaveTask:" destination="BYZ-38-t0r" id="c8X-rj-ssb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="neC-3d-nDv">
+                                <rect key="frame" x="16" y="83" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Series" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTz-lE-JWn">
+                                <rect key="frame" x="16" y="130" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-h8-Xzv">
+                                <rect key="frame" x="16" y="178" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99500352144241333" green="0.73348521316839099" blue="0.0016271532088593468" alpha="0.63546125856164382" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="etCommpany" destination="qsJ-h8-Xzv" id="8Hw-3b-LGb"/>
+                        <outlet property="etPhoneName" destination="neC-3d-nDv" id="6LQ-U8-n4q"/>
+                        <outlet property="etSeries" destination="PTz-lE-JWn" id="XYm-14-wxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213.5999999999999" y="-4.0479760119940034"/>
+        </scene>
+        <!--Devices-->
+        <scene sceneID="JDR-ug-DiJ">
+            <objects>
+                <tableViewController id="65N-ld-TFF" customClass="NoteTableViewController" customModule="QuizIphone_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3v4-Yx-DZv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTable" rowHeight="107" id="ieP-tJ-8XH" customClass="DescTableViewCell" customModule="QuizIphone_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ieP-tJ-8XH" id="WAG-bu-wuW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z33-7c-eAT">
+                                            <rect key="frame" x="8" y="43" width="359" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="pUP-ef-czK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ7-fR-fvP">
+                                            <rect key="frame" x="8" y="74" width="359" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="pBo-Gz-L1b"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.6125728627" green="0.15943378729999999" blue="0.1174151472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Iphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmL-W3-AXo">
+                                            <rect key="frame" x="8" y="10" width="359" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="S4P-aH-cbl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EmL-W3-AXo" firstAttribute="leading" secondItem="WAG-bu-wuW" secondAttribute="leadingMargin" id="0cq-ZZ-hpq"/>
+                                        <constraint firstItem="z33-7c-eAT" firstAttribute="trailing" secondItem="WAG-bu-wuW" secondAttribute="trailingMargin" id="G0b-wn-KUq"/>
+                                        <constraint firstItem="EmL-W3-AXo" firstAttribute="trailing" secondItem="WAG-bu-wuW" secondAttribute="trailingMargin" id="HlI-D0-su3"/>
+                                        <constraint firstItem="z33-7c-eAT" firstAttribute="leading" secondItem="WAG-bu-wuW" secondAttribute="leadingMargin" id="Mn0-YJ-IhW"/>
+                                        <constraint firstItem="MZ7-fR-fvP" firstAttribute="trailing" secondItem="WAG-bu-wuW" secondAttribute="trailingMargin" id="NUQ-4B-xBl"/>
+                                        <constraint firstItem="z33-7c-eAT" firstAttribute="top" secondItem="EmL-W3-AXo" secondAttribute="bottom" constant="8" id="OdV-Pm-nMB"/>
+                                        <constraint firstItem="MZ7-fR-fvP" firstAttribute="top" secondItem="z33-7c-eAT" secondAttribute="bottom" constant="10" id="RmB-P9-jbf"/>
+                                        <constraint firstItem="MZ7-fR-fvP" firstAttribute="leading" secondItem="WAG-bu-wuW" secondAttribute="leadingMargin" id="a8d-vZ-YRp"/>
+                                        <constraint firstItem="z33-7c-eAT" firstAttribute="top" secondItem="EmL-W3-AXo" secondAttribute="bottom" constant="8" id="qRV-lF-tAY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="MZ7-fR-fvP" secondAttribute="bottom" constant="8.5" id="rwn-Ut-SrR"/>
+                                        <constraint firstItem="MZ7-fR-fvP" firstAttribute="top" secondItem="z33-7c-eAT" secondAttribute="bottom" constant="10" id="wBK-mB-cR4"/>
+                                        <constraint firstItem="EmL-W3-AXo" firstAttribute="top" secondItem="WAG-bu-wuW" secondAttribute="topMargin" constant="2" id="wMc-gQ-2xk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelIphone" destination="EmL-W3-AXo" id="bux-MX-8Xb"/>
+                                    <outlet property="labelMerk" destination="MZ7-fR-fvP" id="yXH-ES-AYp"/>
+                                    <outlet property="labelSeri" destination="z33-7c-eAT" id="bFW-XI-S6Q"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="65N-ld-TFF" id="Z0T-IK-a8J"/>
+                            <outlet property="delegate" destination="65N-ld-TFF" id="TpI-2X-XU3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Devices" id="cpP-o3-cBc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pYo-e6-deU">
+                            <color key="tintColor" red="0.99500352140000003" green="0.73348521320000004" blue="0.0016271532089999999" alpha="0.63546125860000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="modal" id="zDC-MB-CUn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNC-z6-4PF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437.5999999999999" y="-4.0479760119940034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6pH-Au-yaB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dYr-mo-fuK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qgv-r2-jQz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.6125728627" green="0.15943378729999999" blue="0.1174151472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="65N-ld-TFF" kind="relationship" relationship="rootViewController" id="kPR-ss-J0v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uM-pj-Vkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-4"/>
+        </scene>
+    </scenes>
+</document>
